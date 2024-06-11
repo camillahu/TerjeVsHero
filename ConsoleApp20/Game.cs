@@ -29,5 +29,10 @@ namespace ConsoleApp20
             Strength = strength;
             Dexterity = dexterity;
         }
+
+        protected Game()
+        {
+
+        }
     }
 }
