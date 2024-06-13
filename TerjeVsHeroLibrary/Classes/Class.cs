@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp20
+namespace TerjeVsHeroLibrary.Classes
 {
-    internal class RaceMenu
+    internal class Class
     {
+        //Class stats and actions
     }
 }

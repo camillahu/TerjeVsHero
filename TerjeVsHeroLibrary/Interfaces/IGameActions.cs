@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp20
+namespace TerjeVsHeroLibrary.Interfaces
 {
     public interface IGameActions
     {

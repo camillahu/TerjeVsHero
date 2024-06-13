@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp20
+namespace TerjeVsHeroLibrary.Interfaces
 {
     public interface IMenu
     {
-        List<string> options { get; set; }
-        void Show();
+        public List<ICommand> options { get; set; }
+        List<string> GetStringList();
     }
 }

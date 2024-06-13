@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp20
+namespace TerjeVsHeroLibrary.Races
 {
-    internal class Boss
+    public class Race
     {
+        //race stats and actions
     }
 }

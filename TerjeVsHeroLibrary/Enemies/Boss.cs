@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp20
+namespace TerjeVsHeroLibrary.Enemies
 {
-    public interface INonBossActions
+    internal class Boss
     {
-        NotImplementedException BoostedAttack();
     }
 }

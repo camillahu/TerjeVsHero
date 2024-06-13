@@ -3,17 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ConsoleApp20;
+using TerjeVsHeroLibrary.Interfaces;
 
-namespace ConsoleApp20
+namespace TerjeVsHeroLibrary.Enemies
 {
     internal class EvilGiraffe : Game, INonBossActions
     {
         public EvilGiraffe(string name, double hp, double strength, double dexterity) : base(name, hp, strength, dexterity)
         {
-            
+
         }
 
-        public EvilGiraffe() 
+        public EvilGiraffe()
         {
             Name = "Evil Giraffe";
             HP = 30;
