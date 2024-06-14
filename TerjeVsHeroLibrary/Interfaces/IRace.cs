@@ -8,7 +8,7 @@ namespace TerjeVsHeroLibrary.Interfaces
 {
     public interface IRace
     {
-        public double DexterityModifier { get; set; }
-        public double HPModifier { get; set; }
+        public double DexterityModifier { get; }
+        public double HPModifier { get; }
     }
 }

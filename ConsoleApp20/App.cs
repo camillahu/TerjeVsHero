@@ -12,7 +12,7 @@ namespace ConsoleApp20
         public static void Run()
         {
             CharaterCreation();
-            
+
         }
 
         private static void CharaterCreation()
@@ -21,17 +21,18 @@ namespace ConsoleApp20
             // ask to pick a race for your character
             "What race would you like to play as?".PrintToConsole();
             ShowRaceMenu();
-            // make a variabel that takes in the answer of the question, what race
-
+            // make a variable that takes in the answer of the question, what race
+            var race = PickRace();
             // ask to pick a class for your character
-            
+
             // show class menu
             "What class would you like to play as?".PrintToConsole();
             ShowClassMenu();
 
             // make a variable takes in the picked class
-            var class = PickClass();
-            // create hero object using the variables  
+            var heroClass = PickProfession();
+            // create new profession object with the variables (eg: new FancyFurry(name, race))
+
 
 
 
@@ -44,13 +45,13 @@ namespace ConsoleApp20
             {
                 item.PrintToConsole();
             }
-        
+
         }
 
         private static void ShowClassMenu()
         {
             var menu = new ClassMenu();
-            foreach(var item in menu.GetStringList())
+            foreach (var item in menu.GetStringList())
             {
                 item.PrintToConsole();
             }
@@ -58,5 +59,12 @@ namespace ConsoleApp20
 
         private static int PickRace()
         {
-
+            return 0;
         }
+
+        private static int PickProfession()
+        {
+            return 0;
+        }
+    }
+}

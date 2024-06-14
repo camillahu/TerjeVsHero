@@ -7,14 +7,12 @@ using TerjeVsHeroLibrary.Interfaces;
 
 namespace TerjeVsHeroLibrary.Races
 {
-    public class Fairy : IRace, ICommand
+    public class Fairy : Race, IRace, ICommand
     {
         public string Label => "Fairy";
-
         public int Option => 1;
-
-        public double Dexterity { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public double HP { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public double DexterityModifier => 5;
+        public double HPModifier => 5;
 
         public string AskForOptionAndLabel()
         {

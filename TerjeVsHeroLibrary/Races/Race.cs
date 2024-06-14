@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ConsoleApp20;
 
-namespace TerjeVsHeroLibrary.Enemies
+namespace TerjeVsHeroLibrary.Races
 {
-    internal class Boss : Game 
+    public class Race
     {
     }
 }

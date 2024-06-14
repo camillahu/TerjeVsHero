@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using TerjeVsHeroLibrary.Interfaces;
 
+// Grunnbase for alle characters (hero, enemies, boss)
+
 namespace ConsoleApp20
 {
     public abstract class Game : IGameActions
@@ -15,7 +17,7 @@ namespace ConsoleApp20
         public double Strength { get; protected set; }
 
         public double Dexterity { get; protected set; }
-        // skal vi ha Energy?
+        // skal vi ha Energy? Nei
 
         public bool IsAlive { get; protected set; } = true;
 
@@ -24,15 +26,11 @@ namespace ConsoleApp20
             return Strength/2;
         }
 
-        protected Game(string name)
+        protected Game()
         {
-            Name = name;
+            Name = "";
             Strength = 10;
         }
 
-        protected Game()
-        {
-
-        }
     }
 }

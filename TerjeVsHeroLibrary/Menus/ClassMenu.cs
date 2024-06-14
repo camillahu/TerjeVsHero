@@ -12,7 +12,7 @@ namespace TerjeVsHeroLibrary.Menus
     {
         public List<ICommand> options { get; set; } = new List<ICommand>()
         {
-            new FancyFurry()
+            new FancyFurry(),
         };
 
         public List<string> GetStringList()

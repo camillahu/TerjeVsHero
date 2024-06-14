@@ -8,14 +8,16 @@ using TerjeVsHeroLibrary.Interfaces;
 
 namespace TerjeVsHeroLibrary.Classes
 {
-    internal class FancyFurry : Hero ICommand
+    internal class FancyFurry : Hero, ICommand
     {
-        public FancyFurry(string name) : base(name)
+        public FancyFurry(string name = "Fancy Furry")
         {
         }
 
-        public string Label => "Fancy furry";
+        public string Label => "Fancy Furry";
         public int Option => 1;
+        public int StrengthModifier => 5;
+        public int Energy => 15;
         public string AskForOptionAndLabel()
         {
             return $"{Option}. {Label}";   
