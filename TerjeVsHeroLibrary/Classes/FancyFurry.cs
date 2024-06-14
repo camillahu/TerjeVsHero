@@ -3,17 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ConsoleApp20;
 using TerjeVsHeroLibrary.Interfaces;
 
 namespace TerjeVsHeroLibrary.Classes
 {
-    internal class FancyFurry : Class, ICommand 
+    internal class FancyFurry : Hero ICommand
     {
-        public string Label { get; }
-        public int Option { get; }
+        public FancyFurry(string name) : base(name)
+        {
+        }
+
+        public string Label => "Fancy furry";
+        public int Option => 1;
         public string AskForOptionAndLabel()
         {
-            throw new NotImplementedException();
+            return $"{Option}. {Label}";   
         }
     }
 }

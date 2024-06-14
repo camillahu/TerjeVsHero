@@ -15,6 +15,7 @@ namespace ConsoleApp20
         public double Strength { get; protected set; }
 
         public double Dexterity { get; protected set; }
+        // skal vi ha Energy?
 
         public bool IsAlive { get; protected set; } = true;
 
@@ -23,12 +24,10 @@ namespace ConsoleApp20
             return Strength/2;
         }
 
-        protected Game(string name, double hp, double strength, double dexterity)
+        protected Game(string name)
         {
             Name = name;
-            HP = hp;
-            Strength = strength;
-            Dexterity = dexterity;
+            Strength = 10;
         }
 
         protected Game()
