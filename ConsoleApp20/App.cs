@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TerjeVsHeroLibrary;
+using TerjeVsHeroLibrary.Interfaces;
 using TerjeVsHeroLibrary.Menus;
 
 namespace ConsoleApp20
@@ -20,46 +22,42 @@ namespace ConsoleApp20
             var name = "What is your name Hero: ".RequestString();
             // ask to pick a race for your character
             "What race would you like to play as?".PrintToConsole();
-            ShowRaceMenu();
-            // make a variable that takes in the answer of the question, what race
+        
             var race = PickRace();
             // ask to pick a class for your character
-
-            // show class menu
-            "What class would you like to play as?".PrintToConsole();
-            ShowClassMenu();
+            "What profession would you like to play as?".PrintToConsole();
+            // show profession menu
+            ShowProfessionMenu();
 
             // make a variable takes in the picked class
             var heroClass = PickProfession();
-            // create new profession object with the variables (eg: new FancyFurry(name, race))
+            // create new player object with the variables (eg: new Player(name, race, profession))
+        }
 
-
-
+        private static void ShowRaceMenu(RaceMenu menu)
+        {
+            foreach (var item in menu.GetStringList())
+            {
+                item.PrintToConsole();
+            }
 
         }
 
-        private static void ShowRaceMenu()
+        private static void ShowProfessionMenu()
+        {
+            var menu = new ProfessionMenu();
+            foreach (var item in menu.GetStringList())
+            {
+                item.PrintToConsole();
+            }
+        }
+
+        private static ICommand PickRace()
         {
             var menu = new RaceMenu();
-            foreach (var item in menu.GetStringList())
-            {
-                item.PrintToConsole();
-            }
-
-        }
-
-        private static void ShowClassMenu()
-        {
-            var menu = new ClassMenu();
-            foreach (var item in menu.GetStringList())
-            {
-                item.PrintToConsole();
-            }
-        }
-
-        private static int PickRace()
-        {
-            return 0;
+            ShowRaceMenu(menu);
+            var userInput = "Pick a number from the menu above:".RequestInt();
+            return menu.options[userInput-1];
         }
 
         private static int PickProfession()

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TerjeVsHeroLibrary;
 using TerjeVsHeroLibrary.Interfaces;
 using TerjeVsHeroLibrary.Races;
 
@@ -20,6 +21,19 @@ namespace ConsoleApp20
 
         public int Energy { get; set; }
         public int StrengthModifier { get; set; }
+        public List<string> ProfessionAbilityName { get; }
+        public List<string> ProfessionAbilitiesReadier { get; }
+        public List<string> ProfessionAbilitiesAttack { get; }
+        public string GetProfessionAbilityReadier(int index)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string GetProfessionAbilityAttack(int index)
+        {
+            throw new NotImplementedException();
+        }
+
         public Race MyRace { get; set; }
         //public double DexterityModifier { get; set; }
         //public double HPModifier { get; set; }

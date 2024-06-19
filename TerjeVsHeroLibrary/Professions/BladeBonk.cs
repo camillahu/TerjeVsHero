@@ -3,47 +3,40 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ConsoleApp20;
 using TerjeVsHeroLibrary.Interfaces;
 
-namespace TerjeVsHeroLibrary.Classes
+namespace TerjeVsHeroLibrary.Professions
 {
-    internal class FancyFurry : ICommand, IProfession
+    public class BladeBonk : ICommand, IProfession
     {
-        public FancyFurry(string name = "Fancy Furry")
-        {
-        }
+        public string Label => "Blade Bonk";
+        public int Option => 2;
+        public int Energy  => 10;
+        public int StrengthModifier => 10;
 
-        public string Label => "Fancy Furry";
-        public int Option => 1;
-        public int StrengthModifier => 5;
-        public int Energy => 15;
-        
         public string AskForOptionAndLabel()
         {
             return $"{Option}. {Label}";   
         }
+
         public List<string> ProfessionAbilityName { get; }
             = new List<string>()
             {
-                new("Wolf"),
-                new("Snake"),
-                new("Turtle")
+                new("Bonk"),
+                new("Crush"),
             };
         public List<string> ProfessionAbilitiesReadier { get; }
             = new List<string>()
             {
-                new(""),
-                new(""),
-                new("You approach your enemy with the speed of a turtle, getting ready to attack"),
+                new("You blunt your blade on a rock to ready it for a devastating bonk on your next turn"),
+                new("You ready your blade for a crushing ankle blow"),
             };
 
          public List<string> ProfessionAbilitiesAttack { get; }
             = new List<string>()
             {
-                new(""),
-                new(""),
-                new("You clench your strong turtle jaw around your enemies nose"),
+                new("You bonk the enemy on the head"),
+                new("You crush your enemys ankle"),
             };
         public string GetProfessionAbilityReadier(int index)
         {
@@ -53,7 +46,6 @@ namespace TerjeVsHeroLibrary.Classes
         {
             return ProfessionAbilitiesAttack[index];
         }
-
 
     }
 }

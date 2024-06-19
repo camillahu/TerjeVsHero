@@ -12,5 +12,15 @@ namespace TerjeVsHeroLibrary.Interfaces
     {
         int Energy { get; } // kalle den EnergyModifier? Nei
         int StrengthModifier { get; }
+
+        List<string> ProfessionAbilityName { get; }
+
+        List<string> ProfessionAbilitiesReadier { get; }
+
+        List<string> ProfessionAbilitiesAttack { get; }
+
+        string GetProfessionAbilityReadier(int index);
+
+        string GetProfessionAbilityAttack(int index);
     }
 }

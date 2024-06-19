@@ -18,5 +18,12 @@ namespace TerjeVsHeroLibrary.Races
         {
             return $"{Option}. {Label}";
         }
+
+        public string RacialAbilityAttack => "Flying attack";
+
+        public override string GetRacialAbilityAttack()
+        {
+            return "You fly into the air and attack the enemy from above";
+        }
     }
 }

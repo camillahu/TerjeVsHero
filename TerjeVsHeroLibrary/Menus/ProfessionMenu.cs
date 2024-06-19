@@ -8,7 +8,7 @@ using TerjeVsHeroLibrary.Interfaces;
 
 namespace TerjeVsHeroLibrary.Menus
 {
-    public class ClassMenu : IMenu
+    public class ProfessionMenu : IMenu
     {
         public List<ICommand> options { get; set; } = new List<ICommand>()
         {
