@@ -14,7 +14,7 @@ namespace ConsoleApp20
         public static void Run()
         {
             CharaterCreation();
-
+             
         }
 
         private static void CharaterCreation()
