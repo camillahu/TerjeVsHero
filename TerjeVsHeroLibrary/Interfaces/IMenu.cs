@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace TerjeVsHeroLibrary.Interfaces
 {
-    public interface IMenu
+    public interface IMenu<T>
     {
-        public List<ICommand> options { get; set; }
+        public List<T> Options { get; set; } 
         List<string> GetStringList();
     }
 }

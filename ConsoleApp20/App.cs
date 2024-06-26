@@ -13,25 +13,22 @@ namespace ConsoleApp20
     {
         public static void Run()
         {
-            CharaterCreation();
-             
+            Hero player = CharaterCreation();
+            //Console.WriteLine($"You just created a hero called {player.Name}, and you're a {player.MyProfession.Label} {player.MyRace.Label}");
+
         }
 
-        private static void CharaterCreation()
+        private static Hero CharaterCreation()
         {
             var name = "What is your name Hero: ".RequestString();
-            // ask to pick a race for your character
             "What race would you like to play as?".PrintToConsole();
-        
             var race = PickRace();
-            // ask to pick a class for your character
-            "What profession would you like to play as?".PrintToConsole();
-            // show profession menu
-            ShowProfessionMenu();
 
-            // make a variable takes in the picked class
-            var heroClass = PickProfession();
-            // create new player object with the variables (eg: new Player(name, race, profession))
+            "What profession would you like to play as?".PrintToConsole();
+            var profession = PickProfession();
+
+            Hero hero = new Hero(name, race, profession);
+            return hero;
         }
 
         private static void ShowRaceMenu(RaceMenu menu)
@@ -43,26 +40,28 @@ namespace ConsoleApp20
 
         }
 
-        private static void ShowProfessionMenu()
+        private static void ShowProfessionMenu(ProfessionMenu menu)
         {
-            var menu = new ProfessionMenu();
             foreach (var item in menu.GetStringList())
             {
                 item.PrintToConsole();
             }
         }
 
-        private static ICommand PickRace()
+        private static Race PickRace()
         {
             var menu = new RaceMenu();
             ShowRaceMenu(menu);
             var userInput = "Pick a number from the menu above:".RequestInt();
-            return menu.options[userInput-1];
+            return menu.Options[userInput-1];
         }
 
-        private static int PickProfession()
+        private static Profession PickProfession()
         {
-            return 0;
+            var menu = new ProfessionMenu();
+            ShowProfessionMenu(menu);
+            var userInput = "Pick a number from the menu above:".RequestInt();
+            return menu.Options[userInput - 1];
         }
     }
 }

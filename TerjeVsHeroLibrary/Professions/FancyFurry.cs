@@ -8,51 +8,76 @@ using TerjeVsHeroLibrary.Interfaces;
 
 namespace TerjeVsHeroLibrary.Classes
 {
-    internal class FancyFurry : ICommand, IProfession
+    public class FancyFurry : Profession
     {
+        //public string Label => "Fancy Furry";
+        //public int Option => 1;
         public FancyFurry(string name = "Fancy Furry")
         {
-        }
-
-        public string Label => "Fancy Furry";
-        public int Option => 1;
-        public int StrengthModifier => 5;
-        public int Energy => 15;
-        
-        public string AskForOptionAndLabel()
-        {
-            return $"{Option}. {Label}";   
-        }
-        public List<string> ProfessionAbilityName { get; }
-            = new List<string>()
+            Label = "Fancy Furry";
+            Option = 1;
+            StrengthModifier = 5;
+            Energy = 15;
+            ProfessionAbilityName 
+            = new List<string>
             {
                 new("Wolf"),
                 new("Snake"),
                 new("Turtle")
             };
-        public List<string> ProfessionAbilitiesReadier { get; }
-            = new List<string>()
+            ProfessionAbilitiesReadier
+            = new List<string>
             {
                 new(""),
                 new(""),
                 new("You approach your enemy with the speed of a turtle, getting ready to attack"),
             };
-
-         public List<string> ProfessionAbilitiesAttack { get; }
-            = new List<string>()
+            ProfessionAbilitiesAttack
+            = new List<string>
             {
                 new(""),
                 new(""),
                 new("You clench your strong turtle jaw around your enemies nose"),
             };
-        public string GetProfessionAbilityReadier(int index)
-        {
-            return ProfessionAbilitiesReadier[index];
         }
-        public string GetProfessionAbilityAttack(int index)
-        {
-            return ProfessionAbilitiesAttack[index];
-        }
+
+        //public string AskForOptionAndLabel()
+        //{
+        //    return $"{Option}. {Label}";   
+        //}
+        //public int StrengthModifier => 5;
+        //public int Energy => 15;
+        
+        //public List<string> ProfessionAbilityName { get; }
+        //    = new List<string>()
+        //    {
+        //        new("Wolf"),
+        //        new("Snake"),
+        //        new("Turtle")
+        //    };
+        //public List<string> ProfessionAbilitiesReadier { get; }
+        //    = new List<string>()
+        //    {
+        //        new(""),
+        //        new(""),
+        //        new("You approach your enemy with the speed of a turtle, getting ready to attack"),
+        //    };
+
+         //public List<string> ProfessionAbilitiesAttack { get; }
+         //   = new List<string>()
+         //   {
+         //       new(""),
+         //       new(""),
+         //       new("You clench your strong turtle jaw around your enemies nose"),
+         //   };
+        //public string GetProfessionAbilityReadier(int index)
+        //{
+        //    return ProfessionAbilitiesReadier[index];
+        //}
+        //public string GetProfessionAbilityAttack(int index)
+        //{
+        //    return ProfessionAbilitiesAttack[index];
+        //}
 
 
     }

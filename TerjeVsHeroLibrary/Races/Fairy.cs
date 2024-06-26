@@ -7,19 +7,28 @@ using TerjeVsHeroLibrary.Interfaces;
 
 namespace TerjeVsHeroLibrary.Races
 {
-    public class Fairy : Race, IRace, ICommand
+    public class Fairy : Race
     {
-        public string Label => "Fairy";
-        public int Option => 1;
-        public double DexterityModifier => 5;
-        public double HPModifier => 5;
+        //public string Label => "Fairy";
+        //public int Option => 1;
+        //public double DexterityModifier => 5;
+        //public double HPModifier => 5;
+        //public string RacialAbilityAttack => "Flying attack";
 
-        public string AskForOptionAndLabel()
+        public Fairy()
         {
-            return $"{Option}. {Label}";
+            Label = "Fairy";
+            Option = 1;
+            DexterityModifier = 5;
+            HPModifier = 5;
+            RacialAbilityAttack = "Flying attack";
         }
 
-        public string RacialAbilityAttack => "Flying attack";
+        //public string AskForOptionAndLabel()
+        //{
+        //    return $"{Option}. {Label}";
+        //}
+
 
         public override string GetRacialAbilityAttack()
         {

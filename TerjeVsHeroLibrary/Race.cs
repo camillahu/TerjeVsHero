@@ -7,12 +7,18 @@ using TerjeVsHeroLibrary.Interfaces;
 
 namespace TerjeVsHeroLibrary
 {
-    public abstract class Race : IRace
+    public abstract class Race : IRace, ICommand
     {
-        public double DexterityModifier { get; }
-        public double HPModifier { get; }
-        public string RacialAbilityAttack { get; }
+        public double DexterityModifier { get; set; }
+        public double HPModifier { get; set; }
+        public string RacialAbilityAttack { get; set; }
 
         public abstract string GetRacialAbilityAttack();
+        public string Label { get; set; }
+        public int Option { get; set; }
+        public string AskForOptionAndLabel()
+        {
+            return $"{Option}. {Label}";
+        }
     }
 }

@@ -17,7 +17,6 @@ namespace ConsoleApp20
         public double Strength { get; protected set; }
 
         public double Dexterity { get; protected set; }
-        // skal vi ha Energy? Nei
 
         public bool IsAlive { get; protected set; } = true;
 

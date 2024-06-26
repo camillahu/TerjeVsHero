@@ -8,9 +8,9 @@ using TerjeVsHeroLibrary.Races;
 
 namespace TerjeVsHeroLibrary.Menus
 {
-    public class RaceMenu : IMenu
+    public class RaceMenu : IMenu<Race>
     {
-        public List<ICommand> options { get; set; } = new List<ICommand>()
+        public List<Race> Options { get; set; } = new List<Race>()
         {
            new Fairy(),
         };
@@ -18,7 +18,7 @@ namespace TerjeVsHeroLibrary.Menus
         public List<string> GetStringList()
         {
             List<string> output = new List<string>();
-            foreach (var item in options)
+            foreach (var item in Options)
             {
                 output.Add(item.AskForOptionAndLabel());
             }

@@ -10,7 +10,7 @@ namespace TerjeVsHeroLibrary.Interfaces
 {
     public interface IProfession
     {
-        int Energy { get; } // kalle den EnergyModifier? Nei
+        int Energy { get; } 
         int StrengthModifier { get; }
 
         List<string> ProfessionAbilityName { get; }
